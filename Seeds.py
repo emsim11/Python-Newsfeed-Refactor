@@ -1,7 +1,7 @@
 # SEED DATABASE SCRIPT: `python Seeds.py`
 
 # Import Database And Models
-from App.Models import User, Post
+from App.Models import User, Post, Comment, Vote
 from App.Database import Session, Base, Engine
 
 # Drop And Rebuild Tables
@@ -20,16 +20,43 @@ Database.add_all([
   User(Username='juliaroberts4', Email='juliaroberts4@yahoo.com', Password='Password123456')
 ])
 
+# Seed Users
+Database.commit()
+
 # Insert Posts
 Database.add_all([
   Post(Title='Donec Posuere Metus Vitae Ipsum', Post_URL='https://buzzfeed.com/in/imperdiet/et/commodo/vulputate.png', User_Id=1),
   Post(Title='Morbi Non Quam Nec Dui Luctus Rutrum', Post_URL='https://nasa.gov/donec.json', User_Id=1),
   Post(Title='Donec Diam Neque, Vestibulum Eget, Vulputate Ut, Ultrices Vel, Augue', Post_URL='https://europa.eu/parturient/montes/nascetur/ridiculus/mus/etiam/vel.aspx', User_Id=2),
   Post(Title='Nunc Purus', Post_URL='http://desdev.cn/enim/blandit/mi.jpg', User_Id=3),
-  Post(Title='Pellentesque Eget Nunc', Post_URL='http://google.ca/nam/nulla/integer.aspx', User_Id=4)         
+  Post(Title='Pellentesque Eget Nunc', Post_URL='http://google.ca/nam/nulla/integer.aspx', User_Id=4)     
 ])
 
-# Run The Insert Statements
+# Seed Posts
+Database.commit()
+
+# Insert Comments
+Database.add_all([ 
+  Comment(Comment_Text='Nunc rhoncus dui vel sem.', User_Id=1, Post_Id=2),
+  Comment(Comment_Text='Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.', User_Id=1, Post_Id=3),
+  Comment(Comment_Text='Aliquam erat volutpat. In congue.', User_Id=2, Post_Id=1),
+  Comment(Comment_Text='Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.', User_Id=2, Post_Id=3),
+  Comment(Comment_Text='In hac habitasse platea dictumst.', User_Id=3, Post_Id=3)
+])
+
+# Seed Comments
+Database.commit()
+
+# Insert Votes
+Database.add_all([
+    Vote(User_Id=1, Post_Id=2),
+    Vote(User_Id=1, Post_Id=4),
+    Vote(User_Id=2, Post_Id=4),
+    Vote(User_Id=3, Post_Id=4),
+    Vote(User_Id=4, Post_Id=2),
+])
+
+# Seed Votes
 Database.commit()
 
 # Close The Session Connection
