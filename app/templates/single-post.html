@@ -3,26 +3,26 @@
 {% block body %}
 {% include "Partials/Post-Info.html" %}
 
-{% if loggedIn == True %}
-<form class="comment-form">
-  <div>
-    <textarea name="comment-body"></textarea>
-  </div>
-
-  <div>
-    <button type="submit">add comment</button>
-    <button type="button" class="upvote-btn">upvote</button>
-  </div>
+{% if LoggedIn == True %}
+<form class="Comment-Form">
+    <div>
+        <textarea name="Comment-Body"></textarea>
+    </div>
+    
+    <div>
+        <button type="submit">Add Comment</button>
+        <button type="button" class="Upvote-Btn">Upvote</button>
+    </div>
 </form>
 {% endif %}
-
-{% with comments=post.comments %}
-  {% include "Partials/Comments.html" %}
+    
+{% with Comments=Post.Comments %}
+    {% include "Partials/Comments.html" %}
 {% endwith %}
-
-{% if loggedIn == True %}
+    
+{% if LoggedIn == True %}
 <script src="/JavaScript/Comment.js"></script>
 <script src="/JavaScript/Upvote.js"></script>
 {% endif %}
-
+    
 {% endblock %}

@@ -2,37 +2,34 @@
 
 {% block body %}
 <article>
-  <a href="/dashboard"> &larr; Back to dashboard</a>
-  <h2>
-    Edit Post
-  </h2>
-  <form class="edit-post-form">
-    <div>
-      <input name="post-title" type="text" value="{{post.title}}" />
-      <span>({{post.post_url}})</span>
-    </div>
-    <div>
-      {{post.vote_count}} point(s) by you on {{post.created_at}}
-      |
-      <a href="/post/{{post.id}}">{{post.comments|length}} comment(s)</a>
-    </div>
-    <button type="submit">Save post</button>
-    <button type="button" class="delete-post-btn">Delete post</button>
-  </form>
+    <a href="/dashboard"> &larr; Back to Dashboard</a>
+    <h2>Edit Post</h2>
+    <form class="Edit-Post-Form">
+        <div>
+            <input name="Post-Title" type="text" value="{{Post.Title}}" />
+            <span>({{Post.Post_URL}})</span>
+        </div>
+        <div>
+            {{Post.Vote_Count}} Point(s) By You On {{Post.Created_At}}
+            |
+            <a href="/post/{{Post.Id}}">{{Post.Comments|length}} Comment(s)</a>
+        </div>
+        <button type="submit">Save Post</button>
+        <button type="button" class="Delete-Post-Btn">Delete Post</button>
+    </form>
 </article>
 
-<form class="comment-form">
-  <div>
-    <textarea name="comment-body"></textarea>
-  </div>
-
-  <div>
-    <button type="submit">add comment</button>
-  </div>
+<form class="Comment-Form">
+    <div>
+        <textarea name="Comment-Body"></textarea>
+    </div>
+    <div>
+        <button type="submit">Add Comment</button>
+    </div>
 </form>
 
-{% with comments=post.comments %}
-  {% include "Partials/Comments.html" %}
+{% with Comments=Post.Comments %}
+    {% include "Partials/Comments.html" %}
 {% endwith %}
 
 <script src="/JavaScript/Edit-Post.js"></script>

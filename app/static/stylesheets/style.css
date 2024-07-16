@@ -1,178 +1,178 @@
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-body, html {
-  height: 100%;
-  padding: 0;
-  margin: 0;
-  font-family: sans-serif;
-  color: #333;
+Body, HTML {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    color: #333;
 }
 
-a {
-  text-decoration: none;
-  color: #225ca3;
-  font-weight: bold;
-  transition: color .1s;
+A {
+    text-decoration: none;
+    color: #225CA3;
+    font-weight: bold;
+    transition: color 0.1s;
 }
 
-a:hover {
-  color: #3486eb;
+A:Hover {
+    color: #3486EB;
 }
 
-button {
-  background-color: #225ca3;
-  border: 0;
-  padding: 1%;
-  color: white;
-  font-weight: bold;
-  transition: background-color .1s;
-  cursor: pointer;
-  border-radius: 5px;
+Button {
+    background-color: #225CA3;
+    border: 0;
+    padding: 1%;
+    color: #FFF;
+    font-weight: bold;
+    transition: background-color 0.1s;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
-button:hover {
-  background-color: #3486eb;
+Button:Hover {
+    background-color: #3486EB;
 }
 
-.post-list {
-  margin: 0;
-  padding: 0;
+Textarea, Input {
+    padding: 0.5%;
+    border-radius: 5px;
+    border: 1px solid #CCC;
 }
 
-textarea, input {
-  padding: .5%;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+Textarea:Focus, Input:Focus {
+    outline: none;
+    border: 1px solid #3486EB;
 }
 
-textarea:focus, input:focus {
-  outline: none;
-  border: 1px solid #3486eb;
+Textarea {
+    min-width: 40%;
+    min-height: 100px;
 }
 
-textarea {
-  min-width: 40%;
-  min-height: 100px;
+Form > Div {
+    margin-bottom: 2%;
 }
 
-form > div {
-  margin-bottom: 2%;
+Form Label {
+    display: block;
 }
 
-form label {
-  display: block;
+Header {
+    border-bottom: 1px solid #CCC;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1%;
+}
+  
+Header H1 {
+    font-size: 1em;
+}
+  
+Main {
+    flex: 1;
+    padding: 2% 4%;
 }
 
-.wrapper {
-  width: 100%;
-  min-height: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
+Footer {
+    border-top: 1px solid #CCC;
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+    font-size: 110%;
 }
 
-header {
-  border-bottom: 1px solid #ccc;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 1%;
+.Post-List {
+    margin: 0;
+    padding: 0;
 }
 
-header h1 {
-  font-size: 1em;
+.Wrapper {
+    width: 100%;
+    min-height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
 }
 
-main {
-  flex: 1;
-  padding: 2% 4%;
+.Btn-No-Style {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    text-decoration: none;
+    color: #225CA3;
+    font-size: 100%;
+    font-weight: bold;
+    transition: color 0.1s;
+    margin-left: 16px;
 }
 
-.btn-no-style {
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  text-decoration: none;
-  color: #225ca3;
-  font-size: 100%;
-  font-weight: bold;
-  transition: color .1s;
-  margin-left: 16px;
+.Btn-No-Style:Hover {
+    background: none;
+    color: #3486EB;
 }
 
-.btn-no-style:hover {
-  background: none;
-  color: #3486eb;
+.Delete-Post-Btn {
+    background-color: #D41414;
 }
 
-.delete-post-btn {
-  background-color: #d41414;
+.Delete-Post-Btn:Hover {
+    background-color: #FF643D;
 }
 
-.delete-post-btn:hover {
-  background-color: #ff643d;
+.Post {
+    margin-bottom: 2%;
+    line-height: 150%;
 }
 
-.post {
-  margin-bottom: 2%;
-  line-height: 150%;
+.Post .Title Span {
+    font-style: italic;
+    font-size: 90%;
+    color: #7D7D7D;
 }
 
-.post .title span {
-  font-style: italic;
-  font-size: 90%;
-  color: #7d7d7d;
+.Edit-Link {
+    display: block;
+    margin: -1.5% 0 2% 0;
 }
 
-.edit-link {
-  display: block;
-  margin: -1.5% 0 2% 0;
+.Upvote-Btn {
+    background-color: #197D0F;
+    transition: background-color .1s;
 }
 
-.upvote-btn {
-  background-color: #197d0f;
-  transition: background-color .1s;
+.Upvote-Btn:Hover {
+    background-color: #1F9C13;
 }
 
-.upvote-btn:hover {
-  background-color: #1f9c13;
+.Comment-Form {
+    margin-bottom: 5%;
 }
 
-.comment-form {
-  margin-bottom: 5%;
+.Comment {
+    padding: 1%;
+    margin-bottom: 1%;
 }
 
-.comment {
-  padding: 1%;
-  margin-bottom: 1%;
+.Comment:Nth-Child(Odd) {
+    background-color: #FFF5EB;
 }
 
-.comment:nth-child(odd) {
-  background-color: #fff5eb;
+.Comment .Meta {
+    font-size: 90%;
+    margin-bottom: 0.5%;
+    opacity: 0.6;
 }
 
-.comment .meta {
-  font-size: 90%;
-  margin-bottom: .5%;
-  opacity: .6;
+.New-Post-Form Input {
+    width: 300px;
 }
 
-.new-post-form input {
-  width: 300px;
-}
-
-.edit-post-form {
-  margin-bottom: 5%;
-}
-
-footer {
-  border-top: 1px solid #ccc;
-  display: flex;
-  justify-content: center;
-  padding: 1%;
-  font-size: 110%;
+.Edit-Post-Form {
+    margin-bottom: 5%;
 }

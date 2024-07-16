@@ -1,11 +1,11 @@
-<article class="post">
-  <div class="title">
-    <a href="{{post.post_url}}" target="_blank">{{post.title}}</a>
-    <span>({{post.post_url}})</span>
-  </div>
-  <div class="meta">
-    {{post.vote_count}} point(s) by {{post.user.username}} on {{post.created_at}}
-    |
-    <a href="/post/{{post.id}}">{{post.comments|length}} comment(s)</a>
-  </div>
+<article class="Post">
+    <div class="Title">
+        <a href="{{Post.Post_URL}}" target="_blank">{{Post.Title}}</a>
+        <span>({{Post.Post_URL}})</span>
+    </div>
+    <div class="Meta">
+        {{Post.Vote_Count}} Point(s) By {{Post.User.Username}} on {{Post.Created_At}}
+        |
+        <a href="/post/{{Post.Id}}">{{Post.Comments|length}} Comment(s)</a>
+    </div>
 </article>

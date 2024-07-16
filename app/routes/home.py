@@ -6,10 +6,10 @@ Blueprints = Blueprint('Home', __name__, url_prefix='/')
 def Index():
   return render_template('Homepage.html')
 
-@Blueprints.route('/Login')
+@Blueprints.route('/login')
 def Login():
-  return render_template('Login.html')
+    return render_template('Login.html')
 
-@Blueprints.route('/Post/<id>')
+@Blueprints.route('/post/<id>')
 def Single(id):
-  return render_template('Single-Post.html')
+    return render_template('Single-Post.html')

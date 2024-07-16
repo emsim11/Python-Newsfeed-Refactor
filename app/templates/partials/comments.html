@@ -1,12 +1,12 @@
-<div class="comments">
-  {% for comment in comments %}
-  <section class="comment">
-    <div class="meta">
-      {{comment.user.username}} on {{comment.created_at}}
-    </div>
-    <div class="text">
-      {{comment.comment_text}}
-    </div>
-  </section>
-  {% endfor %}
+<div class="Comments">
+    {% for Comment in Comments %}
+    <section class="Comment">
+        <div class="Meta">
+            {{Comment.User.Username}} on {{Comment.Created_At}}
+        </div>
+        <div class="Text">
+            {{Comment.Comment_Text}}
+        </div>
+    </section>
+    {% endfor %}
 </div>
