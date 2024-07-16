@@ -16,7 +16,7 @@ class User(Base):
     
   # Email Validation
   @validates('Email')
-  def Validate_Email(Self, Key, Email):
+  def Validate_Email(Self, key, Email):
     
     # Require Email Address To Contain @ Character
     assert '@' in Email
@@ -24,7 +24,7 @@ class User(Base):
     
   # Password Validation
   @validates('Password')
-  def Validate_Password(Self, Key, Password):
+  def Validate_Password(Self, key, Password):
       
     # Require Password To Be 8+ Characters
     assert len(Password) > 8
