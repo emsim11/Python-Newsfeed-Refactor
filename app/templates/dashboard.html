@@ -1,4 +1,4 @@
-{% extends "layout/main.html" %}
+{% extends "Layout/Main.html" %}
 
 {% block body %}
 <section>
@@ -23,7 +23,7 @@
   <ol>
     {% for post in posts %}
     <li>
-      {% include "partials/post-info.html" %}
+      {% include "Partials/Post-Info.html" %}
       <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
     </li>
     {% endfor %}
@@ -31,5 +31,5 @@
 </section>
 {% endif %}
 
-<script src="/javascript/add-post.js"></script>
+<script src="/JavaScript/Add-Post.js"></script>
 {% endblock %}

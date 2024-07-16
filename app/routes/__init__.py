@@ -1,1 +1,1 @@
-from .home import Blueprints as home
+from .Home import Blueprints as Home

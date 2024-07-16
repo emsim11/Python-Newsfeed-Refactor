@@ -1,4 +1,4 @@
-{% extends "layout/main.html" %}
+{% extends "Layout/Main.html" %}
 
 {% block body %}
 <article>
@@ -32,10 +32,10 @@
 </form>
 
 {% with comments=post.comments %}
-  {% include "partials/comments.html" %}
+  {% include "Partials/Comments.html" %}
 {% endwith %}
 
-<script src="/javascript/edit-post.js"></script>
-<script src="/javascript/delete-post.js"></script>
-<script src="/javascript/comment.js"></script>
+<script src="/JavaScript/Edit-Post.js"></script>
+<script src="/JavaScript/Delete-Post.js"></script>
+<script src="/JavaScript/Comment.js"></script>
 {% endblock %}
