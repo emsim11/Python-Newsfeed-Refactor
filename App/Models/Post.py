@@ -24,7 +24,5 @@ class Post(Base):
   # Define Dynamic Property For `Votes`` On Post Model
   # Query For A `Post` Returns Info About Number Of Votes Post Has
   # Cascade Deletes Every Vote Associated With A Post When Post Is Deleted
-  Vote_Count = column_property(
-    select(func.count(Vote.Id)).where(Vote.Post_Id == Id)
-  )
+  Vote_Count = column_property(select(func.count(Vote.Id)).where(Vote.Post_Id == Id))
   Votes = relationship('Vote', cascade='all,delete')
