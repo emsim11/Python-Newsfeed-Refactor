@@ -2,7 +2,8 @@
     {% for Comment in Comments %}
     <section class="Comment">
         <div class="Meta">
-            {{Comment.User.Username}} on {{Comment.Created_At}}
+            <!-- Update `Comment.Created_At` To Format Date ☑️ -->
+            {{Comment.User.Username}} on {{Comment.Created_At|Format_Date}}
         </div>
         <div class="Text">
             {{Comment.Comment_Text}}

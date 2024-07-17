@@ -49,11 +49,12 @@ Database.commit()
 
 # Insert Votes
 Database.add_all([
+    Vote(User_Id=4, Post_Id=1),
     Vote(User_Id=1, Post_Id=2),
+    Vote(User_Id=4, Post_Id=2),
     Vote(User_Id=1, Post_Id=4),
     Vote(User_Id=2, Post_Id=4),
     Vote(User_Id=3, Post_Id=4),
-    Vote(User_Id=4, Post_Id=2),
 ])
 
 # Seed Votes
