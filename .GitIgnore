@@ -1,5 +1,6 @@
 VEnv/
 .env
+.DS_STORE
 
 *.pyc
 __PyCache__/
